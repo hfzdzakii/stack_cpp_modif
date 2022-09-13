@@ -75,6 +75,10 @@ struct Stack
                 {
                     cout << ", ";
                 }
+                else
+                {
+                    cout << ".";
+                }
             }
             cout << endl;
         }
@@ -95,51 +99,69 @@ int main()
     int ch, element, result;
     while (1)
     {
-        cout << "Hasil modif" << endl;
         cout << "*--------------------------------------------------------------------*" << endl;
         cout << "1.PUSH  2.POP  3.DISPLAY  4.ISFULL  5.ISEMPTY  6.TOP  7.SIZE  8.EXIT " << endl;
         cout << "*--------------------------------------------------------------------*" << endl;
         cin >> ch;
         if (ch == 1)
         {
-            cout << "enter element ";
+            cout << "Masukkan elemen : ";
             cin >> element;
             s.push(element);
+            system("pause");
         }
         else if (ch == 2)
         {
             s.pop();
+            system("pause");
         }
         else if (ch == 3)
         {
             s.display();
+            system("pause");
         }
         else if (ch == 4)
         {
             if (s.isfull())
-                cout << "STACK IS FULL" << endl;
+            {
+                cout << "STACK PENUH" << endl;
+            }
             else
-                cout << "STACK IS NOT FULL" << endl
-                     << "YOU CAN PUSH" << endl;
+            {
+                cout << "STACK TIDAK PENUH" << endl;
+                cout << "KAMU BISA PUSH" << endl;
+            }
+            system("pause");
         }
         else if (ch == 5)
         {
             if (s.isempty())
-                cout << "STACK IS EMPTY" << endl;
+            {
+                cout << "STACK KOSONG" << endl;
+            }
             else
-                cout << "STACK IS NOT EMPTY" << endl
-                     << "YOU CAN POP" << endl;
+            {
+                cout << "STACK TIDAK KOSONG" << endl;
+                cout << "YOU BISA POP" << endl;
+            }
+            system("pause");
         }
         else if (ch == 6)
         {
             s.Top();
+            system("pause");
         }
         else if (ch == 7)
         {
             s.Size();
+            system("pause");
         }
         else
+        {
             return 0;
+            system("cls");
+        }
+        system("cls");
     }
     return 0;
 }
